@@ -1,0 +1,16 @@
+
+CREATE TABLE POKEMON
+(id_pokemon INT NOT NULL IDENTITY(1,1),
+name VARCHAR(50) NOT NULL UNIQUE,
+id_type INT NOT NULL,
+gender VARCHAR(50),
+height NUMERIC(5,2) NOT NULL,
+weight NUMERIC(7,2) NOT NULL,
+hp INT NOT NULL,
+attack INT NOT NULL,
+defense INT NOT NULL,
+speed INT NOT NULL,
+special_attack INT NOT NULL,
+special_defense INT NOT NULL,
+CONSTRAINT PK_POKEMON PRIMARY KEY(id_pokemon)
+);
