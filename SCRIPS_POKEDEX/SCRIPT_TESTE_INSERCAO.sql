@@ -20,7 +20,7 @@ VALUES(1,2),
 
 SELECT * FROM POKEMON_ABILIITY;
 
-SELECT P.name AS Nome_Pokemon, A.name AS Nome_Habilidade, A.description AS Descrição_Habilidade FROM POKEMON AS P 
+SELECT P.name AS Nome_Pokemon, A.name AS Nome_Habilidade, A.description AS Descricao_Habilidade FROM POKEMON AS P 
 INNER JOIN POKEMON_ABILIITY AS PA ON P.id_pokemon = PA.id_pokemon
 INNER JOIN ABILIITY AS A ON A.id_abiliity = PA.id_abiliity
 
