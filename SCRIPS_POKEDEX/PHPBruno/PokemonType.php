@@ -1,22 +1,27 @@
+<?php
 class PokemonType{
-    private $IdPokemon;
-    private $IdType;
+    private $_IdPokemon;
+    private $_IdType;
 
-    function getIdPokemon{
-        return $this -> IdPokemon;
+    public function get_IdPokemon(){
+        return $this -> _IdPokemon;
     }
-    function setIdPokemon($IdPokemon){
-        $this -> IdPokemon = %IdPokemon;
-    }
-    function getIdType(){
-        return $this -> IdType;
-    }
-    function setIdType(%IdType){
-        $this -> IdType = $IdType;
+    public function get_IdType(){
+        return $this -> _IdType;
     }
 
-    function __construct(%IdPokemon, %IdType){
-        $this -> setIdPokemon(%IdPokemon);
-        $this -> setIdType(%IdType);
+    public function set_IdPokemon($_IdPokemon){
+        $this -> _IdPokemon = $_IdPokemon;
+    }
+    public function set_IdType($_IdType){
+        $this -> _IdType = $_IdType;
+    }
+
+    public function __construct($_IdPokemon, $_IdType){
+        $this -> set_IdPokemon($_IdPokemon);
+        $this -> set_IdType($_IdType);
     }
 }
+$poktype = new PokemonType(23,1023);
+echo var_dump($poktype);
+?>
